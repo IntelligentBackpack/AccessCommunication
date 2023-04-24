@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package access;
+
+// package to use for generated java classses
+option java_package = "access.communication";
+
+// message, enum should be define in package level 
+option java_multiple_files = true;
+
+message NewUser {
+    required string email = 1;
+    required string name = 2;
+    required string surname = 3;
+    required string password = 4;
+}
+
