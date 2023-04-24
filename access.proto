@@ -9,9 +9,9 @@ option java_package = "access.communication";
 option java_multiple_files = true;
 
 message NewUser {
-    required string email = 1;
-    required string name = 2;
-    required string surname = 3;
-    required string password = 4;
+    string email = 1;
+    string name = 2;
+    string surname = 3;
+    string password = 4;
 }
 
