@@ -15,6 +15,20 @@ message createUserRequest {
     string cognome = 4;
 }
 
+message User {
+    string email = 1;
+    string name = 2;
+    string surname = 3;
+    string password = 4;
+    Role role = 6;
+}
+
+enum Role {
+    USER = 0;
+    STUDENT = 1;
+    TEACHER = 2;
+}
+
 message createUserResponse {
     string message = 1;
 }
