@@ -9,26 +9,28 @@ option java_package = "access.communication";
 option java_multiple_files = true;
 
 message createUserRequest {
-    string email = 1;
-    string password = 2;
-    string nome = 3;
-    string cognome = 4;
+    string email_Creatore = 1;
+    User nuovo_utente = 2;
 }
 
 message User {
     string email = 1;
-    string name = 2;
-    string surname = 3;
-    string password = 4;
+    string password = 2;
+    string nome = 3;
+    string cognome = 4;
+    int32 istituto = 5;
     Role role = 6;
+    string classe = 7;
 }
+
 
 enum Role {
     USER = 0;
     STUDENT = 1;
     TEACHER = 2;
+    INSTITUTE = 3;
+    OWNER = 4;
 }
-
 message createUserResponse {
     string message = 1;
 }
