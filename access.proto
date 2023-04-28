@@ -8,10 +8,13 @@ option java_package = "access.communication";
 // message, enum should be define in package level 
 option java_multiple_files = true;
 
-message NewUser {
+message createUserRequest {
     string email = 1;
-    string name = 2;
-    string surname = 3;
-    string password = 4;
+    string password = 2;
+    string nome = 3;
+    string cognome = 4;
 }
 
+message createUserResponse {
+    string message = 1;
+}
