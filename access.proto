@@ -15,3 +15,17 @@ message NewUser {
     string password = 4;
 }
 
+message User {
+    string email = 1;
+    string name = 2;
+    string surname = 3;
+    string password = 4;
+    Role role = 5;
+}
+
+enum Role {
+    USER = 0;
+    STUDENT = 1;
+    TEACHER = 2;
+}
+
