@@ -8,7 +8,7 @@ option java_package = "access.communication";
 // message, enum should be define in package level 
 option java_multiple_files = true;
 
-message createUserRequest {
+message UserRequest_Permissions {
     string email_Creatore = 1;
     User nuovo_utente = 2;
 }
@@ -31,6 +31,6 @@ enum Role {
     INSTITUTE = 3;
     OWNER = 4;
 }
-message createUserResponse {
+message UserResponse {
     string message = 1;
 }
