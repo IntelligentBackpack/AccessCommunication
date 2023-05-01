@@ -13,6 +13,11 @@ message UserRequest_Permissions {
     User nuovo_utente = 2;
 }
 
+message UserRequest_ChangeEmail {
+    string nuova_Email = 1;
+    User user = 2;
+}
+
 message User {
     string email = 1;
     string password = 2;
@@ -33,4 +38,5 @@ enum Role {
 }
 message UserResponse {
     string message = 1;
+    User user = 2;
 }
