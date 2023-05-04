@@ -8,9 +8,20 @@ option java_package = "access.communication";
 // message, enum should be define in package level 
 option java_multiple_files = true;
 
-message UserRequest_Permissions {
-    string email_Creatore = 1;
-    User utente = 2;
+message PermissionRequest_ChangeInstitute {
+    string email_esecutore = 1;
+    string email_utenteFinale = 2;
+    Istituto nuovo_istituto = 3;
+}
+message PermissionRequest_ChangeRuolo {
+    string email_esecutore = 1;
+    string email_utenteFinale = 2;
+    Role nuovo_ruolo = 3;
+}
+message PermissionRequest_ChangeClasse {
+    string email_esecutore = 1;
+    string email_utenteFinale = 2;
+    string nuova_classe = 3;
 }
 
 message UserRequest_ChangeEmail {
