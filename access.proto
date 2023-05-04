@@ -10,7 +10,7 @@ option java_multiple_files = true;
 
 message UserRequest_Permissions {
     string email_Creatore = 1;
-    User nuovo_utente = 2;
+    User utente = 2;
 }
 
 message UserRequest_ChangeEmail {
@@ -23,7 +23,7 @@ message User {
     string password = 2;
     string nome = 3;
     string cognome = 4;
-    int32 istituto = 5;
+    Istituto istituto = 5;
     Role role = 6;
     string classe = 7;
 }
@@ -35,6 +35,12 @@ enum Role {
     TEACHER = 2;
     INSTITUTE = 3;
     OWNER = 4;
+}
+
+message Istituto {
+    int32 ID = 1;
+    string IstitutoNome = 2;
+    string IstitutoCitta = 3;
 }
 message UserResponse {
     string message = 1;
