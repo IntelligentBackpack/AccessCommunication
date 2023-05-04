@@ -29,6 +29,10 @@ message UserRequest_ChangeEmail {
     User user = 2;
 }
 
+message Response_Istituti {
+    repeated Istituto istituti = 1;
+}
+
 message User {
     string email = 1;
     string password = 2;
